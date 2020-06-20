@@ -7,7 +7,7 @@ const useURLLoader = (url: string, deps: any[] = []) => {
   useEffect(() => {
     setLoading(true);
     axios.get(url).then((res) => {
-      setData(res.data);
+      setData(res.data.datas);
       setLoading(false);
     });
   }, deps);
